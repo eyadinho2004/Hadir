@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>حاضر — إدارة الحضور</title>
+    <style>
+      #hadir-splash {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: grid;
+        place-items: center;
+        background: #f7f3ea;
+        opacity: 0;
+        animation: hadir-splash-in 0.2s 0.3s forwards;
+        transition: opacity 0.4s ease;
+      }
+      #hadir-splash img {
+        width: 120px;
+        height: auto;
+      }
+      #hadir-splash.done {
+        opacity: 0 !important;
+        pointer-events: none;
+        animation: none;
+      }
+      @keyframes hadir-splash-in {
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="hadir-splash" role="status" aria-live="polite" aria-label="جارٍ التحميل">
+      <img src="/brand/hadir-mark-animated.svg" alt="" width="120" height="116" />
+    </div>
+    <div id="root"></div>
+    <script>
+      (function () {
+        var splash = document.getElementById('hadir-splash');
+        function hide() {
+          if (!splash) return;
+          var wait = performance.now() > 300 ? 600 : 0;
+          setTimeout(function () {
+            splash.classList.add('done');
+            setTimeout(function () {
+              splash.remove();
+            }, 400);
+          }, wait);
+        }
+        if (document.readyState === 'complete') hide();
+        else window.addEventListener('load', hide);
+      })();
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

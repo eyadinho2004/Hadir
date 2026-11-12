@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 535 519" role="img" aria-label="حاضر">
+<style>
+.beam{fill:#00D4AE;animation:sweep 4s ease-in-out infinite}
+.check{fill:none;stroke:#00D4AE;stroke-width:74;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:100;animation:draw 4s ease-in-out infinite}
+@keyframes sweep{0%{transform:translateY(40px);opacity:0}6%{opacity:.9}55%{transform:translateY(465px);opacity:.9}60%,100%{transform:translateY(465px);opacity:0}}
+@keyframes draw{0%,57%{stroke-dashoffset:100;opacity:0}58%{opacity:1}72%,92%{stroke-dashoffset:0;opacity:1}98%{stroke-dashoffset:0;opacity:0}100%{stroke-dashoffset:100;opacity:0}}
+@media (prefers-reduced-motion:reduce){.beam{animation:none;opacity:0}.check{animation:none;stroke-dashoffset:0;opacity:1}}
+</style>
+<path fill="#FFFFFF" d="M70 0H201Q225 0 225 24V56Q225 80 201 80H92Q80 80 80 92V195Q80 219 56 219H24Q0 219 0 195V70Q0 0 70 0Z"/>
+<path fill="#FFFFFF" transform="translate(535 0) scale(-1 1)" d="M70 0H201Q225 0 225 24V56Q225 80 201 80H92Q80 80 80 92V195Q80 219 56 219H24Q0 219 0 195V70Q0 0 70 0Z"/>
+<path fill="#FFFFFF" transform="translate(0 519) scale(1 -1)" d="M70 0H201Q225 0 225 24V56Q225 80 201 80H92Q80 80 80 92V195Q80 219 56 219H24Q0 219 0 195V70Q0 0 70 0Z"/>
+<rect class="beam" x="70" y="0" width="395" height="14" rx="7"/>
+<polyline class="check" pathLength="100" points="303,407 368,472 502,325"/>
+</svg>

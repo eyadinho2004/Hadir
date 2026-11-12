@@ -1,0 +1,40 @@
+# Secrets & environment — never commit real credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+
+# Python / Django
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+db.sqlite3
+media/
+staticfiles/
+
+# Test / coverage / mutation
+.pytest_cache/
+.coverage
+htmlcov/
+.mutmut-cache/
+
+# Node / Vite
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# AI tooling exclusions (auth/keys for the approved assistant)
+.devai/
+*.devai-*
